@@ -11,20 +11,15 @@ export default class LoginField extends React.Component {
     render() {
       return (
         <div>
-          <h2>Welcome to React, Aayush</h2>
+          <h2>Welcome</h2>
           <TextField
-            hintText="Last Name"
+            floatingLabelText="Last Name"
           />
           <br />
           <TextField
-            hintText="Seat Number"
+            floatingLabelText="Seat Number"
           />
-          <br />
-          <RaisedButton
-            label="Sign In"
-            secondary={true}
-            onTouchTap={this.handleTouchTap}
-          />
+          <br/>
         </div>
       );
     }
