@@ -4,23 +4,11 @@
  */
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import {List, ListItem} from 'material-ui/List';
-import MenuItem from 'material-ui/MenuItem';
-import DropDownMenu from 'material-ui/DropDownMenu';
-
-
-import Dialog from 'material-ui/Dialog';
 import {deepOrange500} from 'material-ui/styles/colors';
-import FlatButton from 'material-ui/FlatButton';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
-
-
-import MoreVertIcon from 'material-ui/svg-icons/navigation/more-vert';
-import Subheader from 'material-ui/Subheader';
-import IconMenu from 'material-ui/IconMenu';
-import IconButton from 'material-ui/IconButton';
-
 import Info from './Components/Info';
+import Paper from 'material-ui/Paper';
+
 
 const styles = {
   container: {
@@ -43,10 +31,24 @@ class Dashboard extends Component {
 
   render() {
 
+
+    const paperStyle = {
+      width: 900,
+      margin: 20,
+      textAlign: 'center',
+      display: 'inline-block',
+    };
+
     return (
       <MuiThemeProvider muiTheme={muiTheme}>
         <div style={styles.container}>
-          <Info />
+          <Paper
+              style={paperStyle}
+              zDepth={2}
+              children={(
+                <Info />
+                )}
+            />
         </div>
       </MuiThemeProvider>
     );
