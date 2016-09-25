@@ -41,7 +41,6 @@ class Dashboard extends Component {
     this.state = {value: 1};
   }
 
-
   render() {
 
     return (
